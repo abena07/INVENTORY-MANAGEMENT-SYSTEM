@@ -26,5 +26,26 @@ namespace Inventory_Mgt_Sys
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //if (userName.Text=="admin" && password.Text=="admin")
+            //{
+                this.Hide();
+                Admin admin = new Admin();
+                admin.Tag = this;
+                admin.Show();
+            //}
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
