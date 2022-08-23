@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Inventory_Mgt_Sys/1.0.0": {
+        "runtime": {
+          "Inventory_Mgt_Sys.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Inventory_Mgt_Sys/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
