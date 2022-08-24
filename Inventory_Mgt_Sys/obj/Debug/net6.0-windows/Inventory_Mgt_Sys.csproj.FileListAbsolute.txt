@@ -18,3 +18,12 @@ C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.Properties.Resources.resources
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.Admin.resources
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.CreateUser.resources
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.csproj.CopyComplete

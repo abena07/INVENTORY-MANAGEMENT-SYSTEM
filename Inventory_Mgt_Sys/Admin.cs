@@ -42,10 +42,10 @@ namespace Inventory_Mgt_Sys
             // createUser
             // 
             this.createUser.BackColor = System.Drawing.Color.Lavender;
-            this.createUser.Location = new System.Drawing.Point(0, -1);
+            this.createUser.Location = new System.Drawing.Point(0, 0);
             this.createUser.Margin = new System.Windows.Forms.Padding(0);
             this.createUser.Name = "createUser";
-            this.createUser.Size = new System.Drawing.Size(883, 579);
+            this.createUser.Size = new System.Drawing.Size(883, 635);
             this.createUser.TabIndex = 0;
             this.createUser.Load += new System.EventHandler(this.createUser_Load);
             // 
@@ -195,5 +195,11 @@ namespace Inventory_Mgt_Sys
 
         }
 
+        override
+        protected void OnClosed(EventArgs e)
+        {
+            var login = (Form1)Tag;
+            login.Close();
+        }
     }
 }
