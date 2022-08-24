@@ -45,7 +45,7 @@ namespace Inventory_Mgt_Sys
             this.createUser.Location = new System.Drawing.Point(0, 0);
             this.createUser.Margin = new System.Windows.Forms.Padding(0);
             this.createUser.Name = "createUser";
-            this.createUser.Size = new System.Drawing.Size(883, 635);
+            this.createUser.Size = new System.Drawing.Size(857, 681);
             this.createUser.TabIndex = 0;
             this.createUser.Load += new System.EventHandler(this.createUser_Load);
             // 
@@ -149,6 +149,7 @@ namespace Inventory_Mgt_Sys
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.createUser);
             this.panel2.Location = new System.Drawing.Point(216, 13);
             this.panel2.Name = "panel2";

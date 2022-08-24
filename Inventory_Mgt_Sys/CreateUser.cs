@@ -8,19 +8,21 @@ namespace Inventory_Mgt_Sys
 {
     internal class CreateUser: UserControl
     {
-        private TextBox textBox2;
+        private TextBox lastName;
         private Label label1;
         private Label label2;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private DateTimePicker dob;
+        private TextBox userName;
+        private TextBox password;
         private Label label4;
         private Label label5;
         private Button Add;
         private Label label6;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private ComboBox role;
+        private TextBox gender;
+        private Label label7;
+        private TextBox firstName;
 
         public CreateUser()
         {
@@ -28,44 +30,45 @@ namespace Inventory_Mgt_Sys
         }
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dob = new System.Windows.Forms.DateTimePicker();
+            this.userName = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Add = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.role = new System.Windows.Forms.ComboBox();
+            this.gender = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // firstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 49);
-            this.textBox1.MaximumSize = new System.Drawing.Size(180, 40);
-            this.textBox1.MinimumSize = new System.Drawing.Size(180, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 40);
-            this.textBox1.TabIndex = 0;
+            this.firstName.Location = new System.Drawing.Point(84, 49);
+            this.firstName.MaximumSize = new System.Drawing.Size(180, 40);
+            this.firstName.MinimumSize = new System.Drawing.Size(180, 40);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(180, 40);
+            this.firstName.TabIndex = 0;
             // 
-            // textBox2
+            // lastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 141);
-            this.textBox2.MaximumSize = new System.Drawing.Size(180, 40);
-            this.textBox2.MinimumSize = new System.Drawing.Size(180, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 40);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.lastName.Location = new System.Drawing.Point(84, 131);
+            this.lastName.MaximumSize = new System.Drawing.Size(180, 40);
+            this.lastName.MinimumSize = new System.Drawing.Size(180, 40);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(180, 40);
+            this.lastName.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 21);
+            this.label1.Location = new System.Drawing.Point(84, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 3;
@@ -75,7 +78,7 @@ namespace Inventory_Mgt_Sys
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 113);
+            this.label2.Location = new System.Drawing.Point(84, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 4;
@@ -84,47 +87,45 @@ namespace Inventory_Mgt_Sys
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 209);
+            this.label3.Location = new System.Drawing.Point(82, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Date Of Birth";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dateTimePicker1
+            // dob
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(82, 237);
-            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(180, 40);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(180, 40);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 40);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dob.Location = new System.Drawing.Point(82, 216);
+            this.dob.MaximumSize = new System.Drawing.Size(180, 40);
+            this.dob.MinimumSize = new System.Drawing.Size(180, 40);
+            this.dob.Name = "dob";
+            this.dob.Size = new System.Drawing.Size(180, 40);
+            this.dob.TabIndex = 6;
             // 
-            // textBox3
+            // userName
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 334);
-            this.textBox3.MaximumSize = new System.Drawing.Size(180, 40);
-            this.textBox3.MinimumSize = new System.Drawing.Size(180, 40);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 40);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.userName.Location = new System.Drawing.Point(82, 303);
+            this.userName.MaximumSize = new System.Drawing.Size(180, 40);
+            this.userName.MinimumSize = new System.Drawing.Size(180, 40);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(180, 40);
+            this.userName.TabIndex = 7;
             // 
-            // textBox4
+            // password
             // 
-            this.textBox4.Location = new System.Drawing.Point(82, 429);
-            this.textBox4.MaximumSize = new System.Drawing.Size(180, 40);
-            this.textBox4.MinimumSize = new System.Drawing.Size(180, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 40);
-            this.textBox4.TabIndex = 8;
+            this.password.Location = new System.Drawing.Point(82, 397);
+            this.password.MaximumSize = new System.Drawing.Size(180, 40);
+            this.password.MinimumSize = new System.Drawing.Size(180, 40);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(180, 40);
+            this.password.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 401);
+            this.label4.Location = new System.Drawing.Point(80, 369);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 25);
             this.label4.TabIndex = 9;
@@ -134,7 +135,7 @@ namespace Inventory_Mgt_Sys
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(80, 306);
+            this.label5.Location = new System.Drawing.Point(82, 275);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 25);
             this.label5.TabIndex = 10;
@@ -144,7 +145,7 @@ namespace Inventory_Mgt_Sys
             // 
             this.Add.BackColor = System.Drawing.Color.SlateBlue;
             this.Add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Add.Location = new System.Drawing.Point(148, 573);
+            this.Add.Location = new System.Drawing.Point(152, 613);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(112, 42);
             this.Add.TabIndex = 11;
@@ -155,40 +156,60 @@ namespace Inventory_Mgt_Sys
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 499);
+            this.label6.Location = new System.Drawing.Point(84, 535);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 25);
             this.label6.TabIndex = 12;
             this.label6.Text = "Role";
             // 
-            // comboBox1
+            // role
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.role.FormattingEnabled = true;
+            this.role.Items.AddRange(new object[] {
             "Admin",
             "Attendant"});
-            this.comboBox1.Location = new System.Drawing.Point(82, 527);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 33);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Text = "Attendant";
+            this.role.Location = new System.Drawing.Point(82, 563);
+            this.role.Name = "role";
+            this.role.Size = new System.Drawing.Size(182, 33);
+            this.role.TabIndex = 13;
+            this.role.Text = "Attendant";
+            // 
+            // gender
+            // 
+            this.gender.Location = new System.Drawing.Point(80, 483);
+            this.gender.MaximumSize = new System.Drawing.Size(180, 40);
+            this.gender.MinimumSize = new System.Drawing.Size(180, 40);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(180, 40);
+            this.gender.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(80, 455);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 25);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Gender";
             // 
             // CreateUser
             // 
             this.BackColor = System.Drawing.Color.Lavender;
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.gender);
+            this.Controls.Add(this.role);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.userName);
+            this.Controls.Add(this.dob);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lastName);
+            this.Controls.Add(this.firstName);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CreateUser";
             this.Size = new System.Drawing.Size(534, 673);
@@ -224,7 +245,15 @@ namespace Inventory_Mgt_Sys
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string fname = this.firstName.Text;
+            string lname = this.lastName.Text;
+            string pswd = this.password.Text;
+            string role = this.role.Text;
+            string uname = this.userName.Text;
+            string gender = this.gender.Text;
+            string dob = this.dob.Text;
+            User user = new User(fname,lname, dob, role,pswd,uname,gender);
+            user.CreateUser();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

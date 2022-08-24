@@ -17,8 +17,9 @@ namespace Inventory_Mgt_Sys
         {
             try
             {
-                String connectionString = "server=localhost;port=3306;database=inventory;uid=root;pwd=inventory17$";
+                String connectionString = "server=localhost;database=inventory;uid=root;pwd=;";
                 this.conn.ConnectionString = connectionString;
+                Console.WriteLine("succes");
                 //open the connection
                 conn.Open();
             }

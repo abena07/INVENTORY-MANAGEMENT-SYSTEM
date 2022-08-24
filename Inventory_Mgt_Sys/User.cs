@@ -10,8 +10,10 @@ using MySql.Data.MySqlClient;
 
 namespace Inventory_Mgt_Sys
 {
-    internal class User
-    {
+	internal class User
+
+	{
+		Db_Connection _connection;
 		private string firstName;
 
 		public string FirstName
@@ -69,38 +71,41 @@ namespace Inventory_Mgt_Sys
 		}
 
 
-		public User(string firstName, string lastName,string dateOfBirth,string role,string password, string userName,string gender)
+		public User(string firstName, string lastName, string dateOfBirth, string role, string password, string userName, string gender)
 		{
 
 			this.userName = userName;
 			this.firstName = firstName;
 			this.lastName = lastName;
-            this.role = role;
+			this.role = role;
 			this.password = password;
 			this.dateOfBirth = DateOnly.Parse(dateOfBirth);
 			this.gender = gender;
 
 
-        }
+		}
 
 		public void CreateUser()
 		{
-			String insertQuery = $"INSERT INTO users(firstName, lastName,role, dateOfBirth, password, userName)" +
-				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dateOfBirth}', '%m%d%Y') ,'{role}','{password}', '{gender}'";
+			_connection = new();
+			String insertQuery = $"INSERT INTO user(firstName, lastName, dob,role, password, userName, gender)" +
+				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dateOfBirth}', '%m/%d/%Y') ,'{role}','{password}', '{userName}','{gender}')";
 			try
 			{
-				MySqlCommand cmd = new(insertQuery, connection.conn);
+				MySqlCommand cmd = new(insertQuery, _connection.conn);
 				cmd.ExecuteNonQuery();
-				ReadKey();
+
 
 			}
 
-			catch(Exception e)
+			catch (Exception e)
 			{
-                Console.WriteLine(e.Message);
-                Console.ReadKey();
-            }
+				Console.WriteLine(e.Message);
+				Console.WriteLine("fuss");
+
+			}
 		}
+		
 
 
 
