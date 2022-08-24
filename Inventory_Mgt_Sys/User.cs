@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using MySql.Data.MySqlClient;
+
+
 
 namespace Inventory_Mgt_Sys
 {
@@ -56,7 +60,16 @@ namespace Inventory_Mgt_Sys
 			set { role = value; }
 		}
 
-		public User(string firstName, string lastName,string dateOfBirth,string role,string password, string userName)
+		private string gender;
+
+		public string Gender
+		{
+			get { return gender; }
+			set { gender = value; }
+		}
+
+
+		public User(string firstName, string lastName,string dateOfBirth,string role,string password, string userName,string gender)
 		{
 
 			this.userName = userName;
@@ -65,10 +78,29 @@ namespace Inventory_Mgt_Sys
             this.role = role;
 			this.password = password;
 			this.dateOfBirth = DateOnly.Parse(dateOfBirth);
+			this.gender = gender;
 
 
         }
 
+		public void CreateUser()
+		{
+			String insertQuery = $"INSERT INTO users(firstName, lastName,role, dateOfBirth, password, userName)" +
+				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dateOfBirth}', '%m%d%Y') ,'{role}','{password}', '{gender}'";
+			try
+			{
+				MySqlCommand cmd = new(insertQuery, connection.conn);
+				cmd.ExecuteNonQuery();
+				ReadKey();
+
+			}
+
+			catch(Exception e)
+			{
+                Console.WriteLine(e.Message);
+                Console.ReadKey();
+            }
+		}
 
 
 
