@@ -15,6 +15,7 @@ namespace Inventory_Mgt_Sys
         private Panel panel1;
         private Panel panel2;
         private CreateUser createUser;
+        private UpdateUser updateUser;
 
         public Admin()
         {
@@ -25,6 +26,7 @@ namespace Inventory_Mgt_Sys
         private void InitializeComponent()
         {
             this.createUser = new Inventory_Mgt_Sys.CreateUser();
+            this.updateUser = new Inventory_Mgt_Sys.UpdateUser();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,12 +44,20 @@ namespace Inventory_Mgt_Sys
             // createUser
             // 
             this.createUser.BackColor = System.Drawing.Color.Lavender;
-            this.createUser.Location = new System.Drawing.Point(0, 0);
+            this.createUser.Location = new System.Drawing.Point(3, -8);
             this.createUser.Margin = new System.Windows.Forms.Padding(0);
             this.createUser.Name = "createUser";
-            this.createUser.Size = new System.Drawing.Size(857, 681);
+            this.createUser.Size = new System.Drawing.Size(857, 752);
             this.createUser.TabIndex = 0;
             this.createUser.Load += new System.EventHandler(this.createUser_Load);
+            // 
+            // updateUser
+            // 
+            this.updateUser.BackColor = System.Drawing.Color.Lavender;
+            this.updateUser.Location = new System.Drawing.Point(3, -8);
+            this.updateUser.Name = "updateUser";
+            this.updateUser.Size = new System.Drawing.Size(854, 752);
+            this.updateUser.TabIndex = 1;
             // 
             // label1
             // 
@@ -152,6 +162,7 @@ namespace Inventory_Mgt_Sys
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.createUser);
+            this.panel2.Controls.Add(this.updateUser);
             this.panel2.Location = new System.Drawing.Point(216, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(883, 632);
@@ -206,7 +217,7 @@ namespace Inventory_Mgt_Sys
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+           updateUser.BringToFront();
         }
     }
 }

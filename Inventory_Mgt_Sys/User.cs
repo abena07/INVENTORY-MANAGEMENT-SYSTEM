@@ -94,37 +94,70 @@ namespace Inventory_Mgt_Sys
 			{
 				MySqlCommand cmd = new(insertQuery, _connection.conn);
 				cmd.ExecuteNonQuery();
-                MessageBox.Show("User has been added successfully!");
+				MessageBox.Show("User has been added successfully!");
 
 
-            }
+			}
 
 			catch (Exception e)
 			{
 				Console.WriteLine(e.Message);
 				Console.WriteLine("fuss");
+				MessageBox.Show("User already exists");
 
 			}
 		}
-		
+
 		public void UpdateUser()
 		{
+			_connection = new();
 			string updateQuery = $"UPDATE user SET firstName='{firstName}', lastName='{lastName}', dob=STR_TO_DATE({dateOfBirth},'%m/%d/%Y')," +
 				$"role='{role}', password='{password}',userName='{userName}',gender='{gender}')";
 			try
 			{
-                MySqlCommand cmd = new(updateQuery, _connection.conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Console.WriteLine("fuss");
+				MySqlCommand cmd = new(updateQuery, _connection.conn);
+				cmd.ExecuteNonQuery();
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+				Console.WriteLine("fuss");
+				MessageBox.Show("User has sucessfully been updated");
 
-            }
-        }
+			}
+		}
+
+		public static User Search(string username)
+		{
+			Db_Connection _connection = new();
+			string searchQuery = $"SELECT * FROM user WHERE userName = '{username}' )";
+			User userFound = null;
+			try
+			{
+				MySqlCommand cmd = new(searchQuery, _connection.conn);
+				MySqlDataReader reader = cmd.ExecuteReader();
+				if (reader.Read())
+				{
+					string firstName = reader["firstName"].ToString()!;
+					string lastName = reader["lastName"].ToString()!;
+					string userName = reader["userName"].ToString()!;
+					string dateOfBirth = reader["dateOfBirth"].ToString()!;
+					string role = reader["role"].ToString()!;
+					string password = reader["password"].ToString()!;
+					string gender = reader["gender"].ToString()!;
+					userFound = new(firstName, lastName, dateOfBirth, role, password, userName, gender);
+				}
+
+				return userFound;
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+			}
+
+			return userFound;
 
 
-
+		}
 	}
 }

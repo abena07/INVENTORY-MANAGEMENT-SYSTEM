@@ -22,6 +22,9 @@ namespace Inventory_Mgt_Sys
         private Label label2;
         private Label label1;
         private TextBox lastName;
+        private TextBox searchField;
+        private Button button1;
+        private Label label8;
         private TextBox firstName;
 
         public UpdateUser()
@@ -29,6 +32,7 @@ namespace Inventory_Mgt_Sys
             InitializeComponent();
         }
 
+       
         private void InitializeComponent()
         {
             this.gender = new System.Windows.Forms.ComboBox();
@@ -46,6 +50,9 @@ namespace Inventory_Mgt_Sys
             this.label1 = new System.Windows.Forms.Label();
             this.lastName = new System.Windows.Forms.TextBox();
             this.firstName = new System.Windows.Forms.TextBox();
+            this.searchField = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gender
@@ -54,7 +61,7 @@ namespace Inventory_Mgt_Sys
             this.gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.gender.Location = new System.Drawing.Point(139, 523);
+            this.gender.Location = new System.Drawing.Point(365, 390);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(182, 33);
             this.gender.TabIndex = 31;
@@ -62,7 +69,7 @@ namespace Inventory_Mgt_Sys
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(135, 495);
+            this.label7.Location = new System.Drawing.Point(361, 362);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 25);
             this.label7.TabIndex = 30;
@@ -74,7 +81,7 @@ namespace Inventory_Mgt_Sys
             this.role.Items.AddRange(new object[] {
             "Admin",
             "Attendant"});
-            this.role.Location = new System.Drawing.Point(137, 603);
+            this.role.Location = new System.Drawing.Point(41, 489);
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(182, 33);
             this.role.TabIndex = 29;
@@ -83,7 +90,7 @@ namespace Inventory_Mgt_Sys
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(139, 575);
+            this.label6.Location = new System.Drawing.Point(43, 461);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 25);
             this.label6.TabIndex = 28;
@@ -93,7 +100,7 @@ namespace Inventory_Mgt_Sys
             // 
             this.Update.BackColor = System.Drawing.Color.SlateBlue;
             this.Update.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Update.Location = new System.Drawing.Point(207, 653);
+            this.Update.Location = new System.Drawing.Point(403, 646);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(112, 42);
             this.Update.TabIndex = 27;
@@ -104,7 +111,7 @@ namespace Inventory_Mgt_Sys
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(137, 315);
+            this.label5.Location = new System.Drawing.Point(365, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 25);
             this.label5.TabIndex = 26;
@@ -113,7 +120,7 @@ namespace Inventory_Mgt_Sys
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(135, 409);
+            this.label4.Location = new System.Drawing.Point(41, 355);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 25);
             this.label4.TabIndex = 25;
@@ -121,7 +128,7 @@ namespace Inventory_Mgt_Sys
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(137, 437);
+            this.password.Location = new System.Drawing.Point(43, 383);
             this.password.MaximumSize = new System.Drawing.Size(180, 40);
             this.password.MinimumSize = new System.Drawing.Size(180, 40);
             this.password.Name = "password";
@@ -130,7 +137,7 @@ namespace Inventory_Mgt_Sys
             // 
             // userName
             // 
-            this.userName.Location = new System.Drawing.Point(137, 343);
+            this.userName.Location = new System.Drawing.Point(365, 270);
             this.userName.MaximumSize = new System.Drawing.Size(180, 40);
             this.userName.MinimumSize = new System.Drawing.Size(180, 40);
             this.userName.Name = "userName";
@@ -140,7 +147,7 @@ namespace Inventory_Mgt_Sys
             // dob
             // 
             this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dob.Location = new System.Drawing.Point(137, 256);
+            this.dob.Location = new System.Drawing.Point(43, 270);
             this.dob.MaximumSize = new System.Drawing.Size(180, 40);
             this.dob.MinimumSize = new System.Drawing.Size(180, 40);
             this.dob.Name = "dob";
@@ -150,7 +157,7 @@ namespace Inventory_Mgt_Sys
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 228);
+            this.label3.Location = new System.Drawing.Point(43, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 25);
             this.label3.TabIndex = 21;
@@ -159,7 +166,7 @@ namespace Inventory_Mgt_Sys
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 143);
+            this.label2.Location = new System.Drawing.Point(365, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 20;
@@ -168,7 +175,7 @@ namespace Inventory_Mgt_Sys
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 61);
+            this.label1.Location = new System.Drawing.Point(43, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 19;
@@ -176,25 +183,59 @@ namespace Inventory_Mgt_Sys
             // 
             // lastName
             // 
-            this.lastName.Location = new System.Drawing.Point(139, 171);
+            this.lastName.Location = new System.Drawing.Point(365, 162);
             this.lastName.MaximumSize = new System.Drawing.Size(180, 40);
             this.lastName.MinimumSize = new System.Drawing.Size(180, 40);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(180, 40);
             this.lastName.TabIndex = 18;
+            this.lastName.TextChanged += new System.EventHandler(this.lastName_TextChanged);
             // 
             // firstName
             // 
-            this.firstName.Location = new System.Drawing.Point(139, 89);
+            this.firstName.Location = new System.Drawing.Point(43, 162);
             this.firstName.MaximumSize = new System.Drawing.Size(180, 40);
             this.firstName.MinimumSize = new System.Drawing.Size(180, 40);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(180, 40);
             this.firstName.TabIndex = 17;
             // 
+            // searchField
+            // 
+            this.searchField.Location = new System.Drawing.Point(137, 63);
+            this.searchField.Name = "searchField";
+            this.searchField.Size = new System.Drawing.Size(150, 31);
+            this.searchField.TabIndex = 32;
+            this.searchField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SlateBlue;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(280, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 42);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(137, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 25);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Search";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // UpdateUser
             // 
             this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchField);
             this.Controls.Add(this.gender);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.role);
@@ -229,6 +270,28 @@ namespace Inventory_Mgt_Sys
             User user = new User(fname, lname, dob, role, pswd, uname, gender);
             user.UpdateUser();
             MessageBox.Show("User has been added successfully!");
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            User userFound = User.Search(searchField.Text);
+            userName.Text = userFound.UserName;
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
