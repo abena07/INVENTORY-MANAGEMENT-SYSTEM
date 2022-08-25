@@ -99,7 +99,8 @@ namespace Inventory_Mgt_Sys
             // 
             // dob
             // 
-            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dob.CustomFormat = "dd/MM/yyyy";
+            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dob.Location = new System.Drawing.Point(82, 216);
             this.dob.MaximumSize = new System.Drawing.Size(180, 40);
             this.dob.MinimumSize = new System.Drawing.Size(180, 40);

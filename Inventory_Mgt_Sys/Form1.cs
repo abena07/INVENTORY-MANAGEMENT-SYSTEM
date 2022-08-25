@@ -47,5 +47,10 @@ namespace Inventory_Mgt_Sys
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

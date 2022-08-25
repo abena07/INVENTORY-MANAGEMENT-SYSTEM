@@ -146,7 +146,8 @@ namespace Inventory_Mgt_Sys
             // 
             // dob
             // 
-            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dob.CustomFormat = "dd/MM/yyyy";
+            this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dob.Location = new System.Drawing.Point(43, 270);
             this.dob.MaximumSize = new System.Drawing.Size(180, 40);
             this.dob.MinimumSize = new System.Drawing.Size(180, 40);
@@ -280,7 +281,18 @@ namespace Inventory_Mgt_Sys
         private void button1_Click(object sender, EventArgs e)
         {
             User userFound = User.Search(searchField.Text);
-            userName.Text = userFound.UserName;
+            if (userFound != null)
+            {
+               firstName.Text = userFound.FirstName;
+                lastName.Text = userFound.LastName;
+                password.Text = userFound.Password; 
+                role.Text = userFound.Role; 
+                gender.Text = userFound.Gender;
+                userName.Text = userFound.UserName;
+                dob.Text = userFound.DateOfBirth.ToString();
+            }
+            else
+                MessageBox.Show("frior");
 
         }
 

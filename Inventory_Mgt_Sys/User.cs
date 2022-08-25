@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using MySql.Data.MySqlClient;
-
-
+using System.Globalization;
 
 namespace Inventory_Mgt_Sys
 {
@@ -79,7 +78,7 @@ namespace Inventory_Mgt_Sys
 			this.lastName = lastName;
 			this.role = role;
 			this.password = password;
-			this.dateOfBirth = DateOnly.Parse(dateOfBirth);
+			this.dateOfBirth = DateOnly.Parse(dateOfBirth, new CultureInfo("fr-FR"));
 			this.gender = gender;
 
 
@@ -112,7 +111,7 @@ namespace Inventory_Mgt_Sys
 		{
 			_connection = new();
 			string updateQuery = $"UPDATE user SET firstName='{firstName}', lastName='{lastName}', dob=STR_TO_DATE({dateOfBirth},'%m/%d/%Y')," +
-				$"role='{role}', password='{password}',userName='{userName}',gender='{gender}')";
+				$"role='{role}', password='{password}',userName='{userName}',gender='{gender}' WHERE userName='{userName}'";
 			try
 			{
 				MySqlCommand cmd = new(updateQuery, _connection.conn);
@@ -130,7 +129,7 @@ namespace Inventory_Mgt_Sys
 		public static User Search(string username)
 		{
 			Db_Connection _connection = new();
-			string searchQuery = $"SELECT * FROM user WHERE userName = '{username}' )";
+			string searchQuery = $"SELECT * FROM user WHERE userName = '{username}'";
 			User userFound = null;
 			try
 			{
@@ -138,26 +137,30 @@ namespace Inventory_Mgt_Sys
 				MySqlDataReader reader = cmd.ExecuteReader();
 				if (reader.Read())
 				{
+					
 					string firstName = reader["firstName"].ToString()!;
 					string lastName = reader["lastName"].ToString()!;
 					string userName = reader["userName"].ToString()!;
-					string dateOfBirth = reader["dateOfBirth"].ToString()!;
+					string dateOfBirth = DateTime.ParseExact(reader["dob"].ToString()!, "M/d/yyyy hh:mm:ss tt", 
+						CultureInfo.InvariantCulture).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
 					string role = reader["role"].ToString()!;
 					string password = reader["password"].ToString()!;
 					string gender = reader["gender"].ToString()!;
-					userFound = new(firstName, lastName, dateOfBirth, role, password, userName, gender);
+                    Console.WriteLine("HFJHF"+dateOfBirth);
+                    userFound = new(firstName, lastName, dateOfBirth, role, password, userName, gender);
 				}
 
 				return userFound;
-			}
+                Console.WriteLine("fuss");
+            }
 			catch (Exception e)
 			{
 				Console.WriteLine(e.Message);
 			}
 
 			return userFound;
+            Console.WriteLine("fuss");
 
-
-		}
+        }
 	}
 }
