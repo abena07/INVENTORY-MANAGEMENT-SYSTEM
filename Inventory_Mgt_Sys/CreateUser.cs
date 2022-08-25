@@ -20,8 +20,8 @@ namespace Inventory_Mgt_Sys
         private Button Add;
         private Label label6;
         private ComboBox role;
-        private TextBox gender;
         private Label label7;
+        private ComboBox gender;
         private TextBox firstName;
 
         public CreateUser()
@@ -43,8 +43,8 @@ namespace Inventory_Mgt_Sys
             this.Add = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.role = new System.Windows.Forms.ComboBox();
-            this.gender = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // firstName
@@ -55,6 +55,7 @@ namespace Inventory_Mgt_Sys
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(180, 40);
             this.firstName.TabIndex = 0;
+            this.firstName.TextChanged += new System.EventHandler(this.firstName_TextChanged);
             // 
             // lastName
             // 
@@ -64,6 +65,7 @@ namespace Inventory_Mgt_Sys
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(180, 40);
             this.lastName.TabIndex = 1;
+            this.lastName.TextChanged += new System.EventHandler(this.lastName_TextChanged);
             // 
             // label1
             // 
@@ -83,6 +85,7 @@ namespace Inventory_Mgt_Sys
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Lastname";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -103,6 +106,7 @@ namespace Inventory_Mgt_Sys
             this.dob.Name = "dob";
             this.dob.Size = new System.Drawing.Size(180, 40);
             this.dob.TabIndex = 6;
+            this.dob.ValueChanged += new System.EventHandler(this.dob_ValueChanged);
             // 
             // userName
             // 
@@ -112,6 +116,7 @@ namespace Inventory_Mgt_Sys
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(180, 40);
             this.userName.TabIndex = 7;
+            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged);
             // 
             // password
             // 
@@ -121,6 +126,7 @@ namespace Inventory_Mgt_Sys
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(180, 40);
             this.password.TabIndex = 8;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label4
             // 
@@ -140,6 +146,7 @@ namespace Inventory_Mgt_Sys
             this.label5.Size = new System.Drawing.Size(85, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Usename";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Add
             // 
@@ -161,6 +168,7 @@ namespace Inventory_Mgt_Sys
             this.label6.Size = new System.Drawing.Size(46, 25);
             this.label6.TabIndex = 12;
             this.label6.Text = "Role";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // role
             // 
@@ -173,15 +181,7 @@ namespace Inventory_Mgt_Sys
             this.role.Size = new System.Drawing.Size(182, 33);
             this.role.TabIndex = 13;
             this.role.Text = "Attendant";
-            // 
-            // gender
-            // 
-            this.gender.Location = new System.Drawing.Point(80, 483);
-            this.gender.MaximumSize = new System.Drawing.Size(180, 40);
-            this.gender.MinimumSize = new System.Drawing.Size(180, 40);
-            this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(180, 40);
-            this.gender.TabIndex = 14;
+            this.role.SelectedIndexChanged += new System.EventHandler(this.role_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -191,12 +191,25 @@ namespace Inventory_Mgt_Sys
             this.label7.Size = new System.Drawing.Size(69, 25);
             this.label7.TabIndex = 15;
             this.label7.Text = "Gender";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // gender
+            // 
+            this.gender.FormattingEnabled = true;
+            this.gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.gender.Location = new System.Drawing.Point(84, 483);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(182, 33);
+            this.gender.TabIndex = 16;
+            this.gender.SelectedIndexChanged += new System.EventHandler(this.gender_SelectedIndexChanged);
             // 
             // CreateUser
             // 
             this.BackColor = System.Drawing.Color.Lavender;
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.gender);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.role);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Add);
@@ -254,9 +267,65 @@ namespace Inventory_Mgt_Sys
             string dob = this.dob.Text;
             User user = new User(fname,lname, dob, role,pswd,uname,gender);
             user.CreateUser();
+            //MessageBox.Show("User has been added successfully!");
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dob_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void role_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gender_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

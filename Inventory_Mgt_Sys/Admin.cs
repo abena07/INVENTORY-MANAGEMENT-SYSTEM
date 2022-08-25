@@ -69,6 +69,7 @@ namespace Inventory_Mgt_Sys
             this.label2.Size = new System.Drawing.Size(135, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "Update User";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -201,6 +202,11 @@ namespace Inventory_Mgt_Sys
         {
             var login = (Form1)Tag;
             login.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

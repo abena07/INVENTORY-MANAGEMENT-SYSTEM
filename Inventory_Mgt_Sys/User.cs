@@ -94,9 +94,10 @@ namespace Inventory_Mgt_Sys
 			{
 				MySqlCommand cmd = new(insertQuery, _connection.conn);
 				cmd.ExecuteNonQuery();
+                MessageBox.Show("User has been added successfully!");
 
 
-			}
+            }
 
 			catch (Exception e)
 			{
@@ -106,6 +107,22 @@ namespace Inventory_Mgt_Sys
 			}
 		}
 		
+		public void UpdateUser()
+		{
+			string updateQuery = $"UPDATE user SET firstName='{firstName}', lastName='{lastName}', dob=STR_TO_DATE({dateOfBirth},'%m/%d/%Y')," +
+				$"role='{role}', password='{password}',userName='{userName}',gender='{gender}')";
+			try
+			{
+                MySqlCommand cmd = new(updateQuery, _connection.conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("fuss");
+
+            }
+        }
 
 
 

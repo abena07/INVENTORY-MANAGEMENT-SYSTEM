@@ -27,3 +27,4 @@ C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\ZstdNet.dll
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.csproj.CopyComplete
+C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.UpdateUser.resources
