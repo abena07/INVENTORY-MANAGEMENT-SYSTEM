@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Inventory_Mgt_Sys
 {
@@ -106,7 +107,7 @@ namespace Inventory_Mgt_Sys
 
 			}
 		}
-
+		//function to update user
 		public void UpdateUser()
 		{
 			_connection = new();
@@ -126,7 +127,29 @@ namespace Inventory_Mgt_Sys
 			}
 		}
 
-		public static User Search(string username)
+
+		//function to delete user
+		
+		public void DeleteUser(string username)
+		{
+			_connection = new();
+            string deleteQuery = $"DELETE * FROM user WHERE userName = '{username}'";
+            try
+            {
+                MySqlCommand cmd = new(deleteQuery, _connection.conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("fuss");
+                MessageBox.Show("User has sucessfully been updated");
+
+            }
+        }
+
+        /// function to search for user
+        public static User Search(string username)
 		{
 			Db_Connection _connection = new();
 			string searchQuery = $"SELECT * FROM user WHERE userName = '{username}'";

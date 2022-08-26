@@ -25,6 +25,7 @@ namespace Inventory_Mgt_Sys
         private TextBox searchField;
         private Button button1;
         private Label label8;
+        private Button button2;
         private TextBox firstName;
 
         public UpdateUser()
@@ -32,7 +33,8 @@ namespace Inventory_Mgt_Sys
             InitializeComponent();
         }
 
-       
+      
+
         private void InitializeComponent()
         {
             this.gender = new System.Windows.Forms.ComboBox();
@@ -53,6 +55,7 @@ namespace Inventory_Mgt_Sys
             this.searchField = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gender
@@ -231,9 +234,22 @@ namespace Inventory_Mgt_Sys
             this.label8.Text = "Search";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SlateBlue;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(297, 646);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 42);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // UpdateUser
             // 
             this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.searchField);
@@ -292,7 +308,7 @@ namespace Inventory_Mgt_Sys
                 dob.Text = userFound.DateOfBirth.ToString();
             }
             else
-                MessageBox.Show("frior");
+                MessageBox.Show(" oops,user does not exist.");
 
         }
 
@@ -304,6 +320,20 @@ namespace Inventory_Mgt_Sys
         private void lastName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string fname = this.firstName.Text;
+            string lname = this.lastName.Text;
+            string pswd = this.password.Text;
+            string role = this.role.Text;
+            string uname = this.userName.Text;
+            string gender = this.gender.Text;
+            string dob = this.dob.Text;
+            User user = new User(fname, lname, dob, role, pswd, uname, gender);
+            user.DeleteUser(uname);
+            MessageBox.Show("User has been deleted");
         }
     }
 }

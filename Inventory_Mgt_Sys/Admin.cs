@@ -191,11 +191,12 @@ namespace Inventory_Mgt_Sys
         private void label3_Click(object sender, EventArgs e)
         {
 
+            updateUser.BringToFront();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            createUser.BringToFront();
         }
 
         private void createUser_Load(object sender, EventArgs e)
