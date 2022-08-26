@@ -18,6 +18,8 @@ namespace Inventory_Mgt_Sys
         private Label label1;
         private TextBox ProductQty;
         private TextBox ProductCat;
+        private TextBox ProductPrice;
+        private Label label5;
         private TextBox ProductName;
 
         public AddProduct()
@@ -38,12 +40,14 @@ namespace Inventory_Mgt_Sys
             this.ProductQty = new System.Windows.Forms.TextBox();
             this.ProductName = new System.Windows.Forms.TextBox();
             this.ProductCat = new System.Windows.Forms.TextBox();
+            this.ProductPrice = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(84, 463);
+            this.label7.Location = new System.Drawing.Point(81, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 25);
             this.label7.TabIndex = 30;
@@ -54,7 +58,7 @@ namespace Inventory_Mgt_Sys
             // 
             this.Add.BackColor = System.Drawing.Color.SlateBlue;
             this.Add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Add.Location = new System.Drawing.Point(156, 633);
+            this.Add.Location = new System.Drawing.Point(408, 408);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(112, 42);
             this.Add.TabIndex = 27;
@@ -65,7 +69,7 @@ namespace Inventory_Mgt_Sys
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 365);
+            this.label4.Location = new System.Drawing.Point(331, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 25);
             this.label4.TabIndex = 25;
@@ -74,7 +78,7 @@ namespace Inventory_Mgt_Sys
             // 
             // ProductColor
             // 
-            this.ProductColor.Location = new System.Drawing.Point(84, 393);
+            this.ProductColor.Location = new System.Drawing.Point(331, 173);
             this.ProductColor.MaximumSize = new System.Drawing.Size(180, 40);
             this.ProductColor.MinimumSize = new System.Drawing.Size(180, 40);
             this.ProductColor.Name = "ProductColor";
@@ -86,7 +90,7 @@ namespace Inventory_Mgt_Sys
             // 
             this.Dop.CustomFormat = "dd/MM/yyyy";
             this.Dop.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dop.Location = new System.Drawing.Point(86, 171);
+            this.Dop.Location = new System.Drawing.Point(329, 69);
             this.Dop.MaximumSize = new System.Drawing.Size(180, 40);
             this.Dop.MinimumSize = new System.Drawing.Size(180, 40);
             this.Dop.Name = "Dop";
@@ -97,7 +101,7 @@ namespace Inventory_Mgt_Sys
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 143);
+            this.label3.Location = new System.Drawing.Point(331, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 25);
             this.label3.TabIndex = 21;
@@ -107,7 +111,7 @@ namespace Inventory_Mgt_Sys
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 257);
+            this.label2.Location = new System.Drawing.Point(81, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 25);
             this.label2.TabIndex = 20;
@@ -126,7 +130,7 @@ namespace Inventory_Mgt_Sys
             // 
             // ProductQty
             // 
-            this.ProductQty.Location = new System.Drawing.Point(84, 285);
+            this.ProductQty.Location = new System.Drawing.Point(84, 173);
             this.ProductQty.MaximumSize = new System.Drawing.Size(180, 40);
             this.ProductQty.MinimumSize = new System.Drawing.Size(180, 40);
             this.ProductQty.Name = "ProductQty";
@@ -146,16 +150,36 @@ namespace Inventory_Mgt_Sys
             // 
             // ProductCat
             // 
-            this.ProductCat.Location = new System.Drawing.Point(84, 491);
+            this.ProductCat.Location = new System.Drawing.Point(81, 284);
             this.ProductCat.MaximumSize = new System.Drawing.Size(180, 40);
             this.ProductCat.MinimumSize = new System.Drawing.Size(180, 40);
             this.ProductCat.Name = "ProductCat";
             this.ProductCat.Size = new System.Drawing.Size(180, 40);
             this.ProductCat.TabIndex = 31;
             // 
+            // ProductPrice
+            // 
+            this.ProductPrice.Location = new System.Drawing.Point(331, 284);
+            this.ProductPrice.MaximumSize = new System.Drawing.Size(180, 40);
+            this.ProductPrice.MinimumSize = new System.Drawing.Size(180, 40);
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.Size = new System.Drawing.Size(180, 40);
+            this.ProductPrice.TabIndex = 33;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(331, 256);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 25);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "ProductPrice";
+            // 
             // AddProduct
             // 
             this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.ProductPrice);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.ProductCat);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Add);
@@ -196,6 +220,16 @@ namespace Inventory_Mgt_Sys
 
         private void Add_Click(object sender, EventArgs e)
         {
+            string pname = this.ProductName.Text;
+            string dop = this.Dop.Text;
+            int pqty = int.Parse(this.ProductQty.Text);
+            string pcolor = this.ProductColor.Text;
+            string pcat = this.ProductCat.Text;
+            int price = int.Parse(this.ProductPrice.Text);
+          
+            Product product = new Product(pname,dop,pqty,pcolor,pcat,price );
+            
+            product.AddProduct();
 
         }
 

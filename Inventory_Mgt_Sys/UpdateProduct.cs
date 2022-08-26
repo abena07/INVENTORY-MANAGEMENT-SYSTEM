@@ -22,6 +22,8 @@ namespace Inventory_Mgt_Sys
         private Label label1;
         private TextBox ProductQty;
         private TextBox ProductName;
+        private TextBox ProductPrice;
+        private Label label5;
         private Button Update;
 
         public UpdateProduct()
@@ -45,6 +47,8 @@ namespace Inventory_Mgt_Sys
             this.label1 = new System.Windows.Forms.Label();
             this.ProductQty = new System.Windows.Forms.TextBox();
             this.ProductName = new System.Windows.Forms.TextBox();
+            this.ProductPrice = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -188,9 +192,30 @@ namespace Inventory_Mgt_Sys
             this.ProductName.Size = new System.Drawing.Size(180, 40);
             this.ProductName.TabIndex = 55;
             // 
+            // ProductPrice
+            // 
+            this.ProductPrice.Location = new System.Drawing.Point(339, 372);
+            this.ProductPrice.MaximumSize = new System.Drawing.Size(180, 40);
+            this.ProductPrice.MinimumSize = new System.Drawing.Size(180, 40);
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.Size = new System.Drawing.Size(180, 40);
+            this.ProductPrice.TabIndex = 67;
+            this.ProductPrice.TextChanged += new System.EventHandler(this.ProductPrice_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(339, 344);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 25);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "ProductPrice";
+            // 
             // UpdateProduct
             // 
             this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.ProductPrice);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.ProductCat);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -210,6 +235,11 @@ namespace Inventory_Mgt_Sys
             this.Size = new System.Drawing.Size(599, 723);
             this.ResumeLayout(false);
             this.PerformLayout();
+
+        }
+
+        private void ProductPrice_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
