@@ -133,7 +133,7 @@ namespace Inventory_Mgt_Sys
 		public void DeleteUser(string username)
 		{
 			_connection = new();
-            string deleteQuery = $"DELETE * FROM user WHERE userName = '{username}'";
+            string deleteQuery = $"DELETE FROM user WHERE userName = '{username}'";
             try
             {
                 MySqlCommand cmd = new(deleteQuery, _connection.conn);

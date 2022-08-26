@@ -274,7 +274,7 @@ namespace Inventory_Mgt_Sys
             this.PerformLayout();
 
         }
-
+        //onclick the user is updated
         private void Update_Click(object sender, EventArgs e)
         {
             string fname = this.firstName.Text;
@@ -321,7 +321,7 @@ namespace Inventory_Mgt_Sys
         {
 
         }
-
+        ///onclick the user is deleted
         private void button2_Click(object sender, EventArgs e)
         {
             string fname = this.firstName.Text;

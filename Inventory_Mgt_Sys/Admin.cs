@@ -16,6 +16,7 @@ namespace Inventory_Mgt_Sys
         private Panel panel2;
         private CreateUser createUser;
         private UpdateUser updateUser;
+        private AddProduct addProduct;
 
         public Admin()
         {
@@ -27,6 +28,7 @@ namespace Inventory_Mgt_Sys
         {
             this.createUser = new Inventory_Mgt_Sys.CreateUser();
             this.updateUser = new Inventory_Mgt_Sys.UpdateUser();
+            this.addProduct = new Inventory_Mgt_Sys.AddProduct();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -117,6 +119,7 @@ namespace Inventory_Mgt_Sys
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 640);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label8
             // 
@@ -157,12 +160,14 @@ namespace Inventory_Mgt_Sys
             this.label5.Size = new System.Drawing.Size(138, 30);
             this.label5.TabIndex = 4;
             this.label5.Text = "Add Product";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.createUser);
             this.panel2.Controls.Add(this.updateUser);
+            this.panel2.Controls.Add(this.addProduct);
             this.panel2.Location = new System.Drawing.Point(216, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(883, 632);
@@ -190,12 +195,13 @@ namespace Inventory_Mgt_Sys
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            //navigate to the delete user section
             updateUser.BringToFront();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
+            //navigate to the create user section
             createUser.BringToFront();
         }
 
@@ -219,6 +225,16 @@ namespace Inventory_Mgt_Sys
         private void label2_Click(object sender, EventArgs e)
         {
            updateUser.BringToFront();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            addProduct.BringToFront();
         }
     }
 }
