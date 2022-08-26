@@ -17,6 +17,7 @@ namespace Inventory_Mgt_Sys
         private CreateUser createUser;
         private UpdateUser updateUser;
         private AddProduct addProduct;
+        private UpdateProduct updateProduct;
 
         public Admin()
         {
@@ -29,6 +30,7 @@ namespace Inventory_Mgt_Sys
             this.createUser = new Inventory_Mgt_Sys.CreateUser();
             this.updateUser = new Inventory_Mgt_Sys.UpdateUser();
             this.addProduct = new Inventory_Mgt_Sys.AddProduct();
+            this.updateProduct = new Inventory_Mgt_Sys.UpdateProduct();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,6 +62,22 @@ namespace Inventory_Mgt_Sys
             this.updateUser.Name = "updateUser";
             this.updateUser.Size = new System.Drawing.Size(854, 752);
             this.updateUser.TabIndex = 1;
+            // 
+            // addProduct
+            // 
+            this.addProduct.BackColor = System.Drawing.Color.Lavender;
+            this.addProduct.Location = new System.Drawing.Point(0, 0);
+            this.addProduct.Name = "addProduct";
+            this.addProduct.Size = new System.Drawing.Size(662, 770);
+            this.addProduct.TabIndex = 2;
+            // 
+            // updateProduct
+            // 
+            this.updateProduct.BackColor = System.Drawing.Color.Lavender;
+            this.updateProduct.Location = new System.Drawing.Point(0, 0);
+            this.updateProduct.Name = "updateProduct";
+            this.updateProduct.Size = new System.Drawing.Size(599, 723);
+            this.updateProduct.TabIndex = 3;
             // 
             // label1
             // 
@@ -139,6 +157,7 @@ namespace Inventory_Mgt_Sys
             this.label7.Size = new System.Drawing.Size(163, 30);
             this.label7.TabIndex = 6;
             this.label7.Text = "Delete Product";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -168,6 +187,7 @@ namespace Inventory_Mgt_Sys
             this.panel2.Controls.Add(this.createUser);
             this.panel2.Controls.Add(this.updateUser);
             this.panel2.Controls.Add(this.addProduct);
+            this.panel2.Controls.Add(this.updateProduct);
             this.panel2.Location = new System.Drawing.Point(216, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(883, 632);
@@ -212,7 +232,7 @@ namespace Inventory_Mgt_Sys
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+            updateProduct.BringToFront();
         }
 
         override
@@ -235,6 +255,11 @@ namespace Inventory_Mgt_Sys
         private void label5_Click(object sender, EventArgs e)
         {
             addProduct.BringToFront();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            updateProduct.BringToFront();
         }
     }
 }

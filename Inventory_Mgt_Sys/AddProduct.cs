@@ -54,7 +54,7 @@ namespace Inventory_Mgt_Sys
             // 
             this.Add.BackColor = System.Drawing.Color.SlateBlue;
             this.Add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Add.Location = new System.Drawing.Point(154, 561);
+            this.Add.Location = new System.Drawing.Point(156, 633);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(112, 42);
             this.Add.TabIndex = 27;
