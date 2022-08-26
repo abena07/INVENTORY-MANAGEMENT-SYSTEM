@@ -85,6 +85,7 @@ namespace Inventory_Mgt_Sys
 
 		}
 
+		//a query to create a new user
 		public void CreateUser()
 		{
 			_connection = new();
@@ -148,7 +149,7 @@ namespace Inventory_Mgt_Sys
             }
         }
 
-        /// function to search for user
+        /// function to search for a user
         public static User Search(string username)
 		{
 			Db_Connection _connection = new();
