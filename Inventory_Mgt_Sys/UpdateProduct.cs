@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Inventory_Mgt_Sys
 {
@@ -81,6 +83,7 @@ namespace Inventory_Mgt_Sys
             this.button1.TabIndex = 52;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // searchField
             // 
@@ -88,6 +91,7 @@ namespace Inventory_Mgt_Sys
             this.searchField.Name = "searchField";
             this.searchField.Size = new System.Drawing.Size(150, 31);
             this.searchField.TabIndex = 51;
+            this.searchField.TextChanged += new System.EventHandler(this.searchField_TextChanged);
             // 
             // Update
             // 
@@ -239,6 +243,46 @@ namespace Inventory_Mgt_Sys
         }
 
         private void ProductPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Product productFound = Product.Search(searchField.Text);
+            if (productFound != null)
+            {
+                ProductName.Text = productFound.ProductName;
+                Dop.Text = productFound.Dop.ToString();
+                ProductQty.Text = productFound.ProductQty.ToString();
+                ProductColor.Text = productFound.ProductColor;
+                ProductCat.Text = productFound.ProductCat;
+                ProductPrice.Text = productFound.ProductPrice.ToString();
+            }
+            else
+                MessageBox.Show(" oops,product does not exist.");
+            
+        }
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    User userFound = User.Search(searchField.Text);
+        //    if (userFound != null)
+        //    {
+        //        firstName.Text = userFound.FirstName;
+        //        lastName.Text = userFound.LastName;
+        //        password.Text = userFound.Password;
+        //        role.Text = userFound.Role;
+        //        gender.Text = userFound.Gender;
+        //        userName.Text = userFound.UserName;
+        //        dob.Text = userFound.DateOfBirth.ToString();
+        //    }
+        //    else
+        //        MessageBox.Show(" oops,user does not exist.");
+
+        //}
+
+        private void searchField_TextChanged(object sender, EventArgs e)
         {
 
         }

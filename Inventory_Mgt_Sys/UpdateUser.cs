@@ -299,7 +299,7 @@ namespace Inventory_Mgt_Sys
             User userFound = User.Search(searchField.Text);
             if (userFound != null)
             {
-               firstName.Text = userFound.FirstName;
+                firstName.Text = userFound.FirstName;
                 lastName.Text = userFound.LastName;
                 password.Text = userFound.Password; 
                 role.Text = userFound.Role; 
@@ -311,6 +311,8 @@ namespace Inventory_Mgt_Sys
                 MessageBox.Show(" oops,user does not exist.");
 
         }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
