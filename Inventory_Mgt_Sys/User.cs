@@ -144,7 +144,7 @@ namespace Inventory_Mgt_Sys
             {
                 Console.WriteLine(e.Message);
                 Console.WriteLine("fuss");
-                MessageBox.Show("User has sucessfully been updated");
+                MessageBox.Show("User has been deleted");
 
             }
         }

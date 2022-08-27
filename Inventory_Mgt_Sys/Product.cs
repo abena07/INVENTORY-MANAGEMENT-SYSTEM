@@ -102,7 +102,7 @@ public string ProductCat
         public static Product Search(string productname)
         {
             Db_Connection _connection = new();
-            string searchQuery = $"SELECT * FROM product WHERE userName = '{productname}'";
+            string searchQuery = $"SELECT * FROM product WHERE ProductName = '{productname}'";
             Product productFound = null;
             try
             {
@@ -161,8 +161,8 @@ public string ProductCat
         }
 
 
-        // function to delete user
-        public void DeleteProducr(string productname)
+        // function to delete product
+        public void DeleteProduct(string productname)
         {
             _connection = new();
             string deleteQuery = $"DELETE FROM product WHERE ProductName = '{productname}'";

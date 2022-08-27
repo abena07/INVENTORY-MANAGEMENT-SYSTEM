@@ -63,6 +63,7 @@ namespace Inventory_Mgt_Sys
             this.button2.TabIndex = 54;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -103,6 +104,7 @@ namespace Inventory_Mgt_Sys
             this.Update.TabIndex = 46;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = false;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // ProductCat
             // 
@@ -264,27 +266,40 @@ namespace Inventory_Mgt_Sys
             
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    User userFound = User.Search(searchField.Text);
-        //    if (userFound != null)
-        //    {
-        //        firstName.Text = userFound.FirstName;
-        //        lastName.Text = userFound.LastName;
-        //        password.Text = userFound.Password;
-        //        role.Text = userFound.Role;
-        //        gender.Text = userFound.Gender;
-        //        userName.Text = userFound.UserName;
-        //        dob.Text = userFound.DateOfBirth.ToString();
-        //    }
-        //    else
-        //        MessageBox.Show(" oops,user does not exist.");
-
-        //}
+        
 
         private void searchField_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        //onlclick product is updated
+        private void Update_Click(object sender, EventArgs e)
+        {
+            string name = this.ProductName.Text;
+            string dop = this.Dop.Text;
+            int qty = int.Parse(this.ProductQty.Text);
+            string color = this.ProductColor.Text;
+            string cat = this.ProductCat.Text;
+            int price = int.Parse(this.ProductPrice.Text);
+            
+            Product product = new Product(name,dop,qty,color,cat,price);
+            product.UpdateProduct();
+            MessageBox.Show("Product has been updated successfully!");
+
+        }
+        // onclick the product is deleted
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string productname = this.ProductName.Text;
+            string dop = this.Dop.Text;
+            int qty = int.Parse(this.ProductQty.Text);
+            string color = this.ProductColor.Text;
+            string cat = this.ProductCat.Text;
+            int price = int.Parse(this.ProductPrice.Text);
+
+            Product product = new Product(productname, dop, qty, color, cat, price);
+            product.DeleteProduct(productname);
+            MessageBox.Show("Product has been deleted!");
         }
     }
 }

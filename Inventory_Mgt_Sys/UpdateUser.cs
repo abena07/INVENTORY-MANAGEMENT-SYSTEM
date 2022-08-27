@@ -286,14 +286,14 @@ namespace Inventory_Mgt_Sys
             string dob = this.dob.Text;
             User user = new User(fname, lname, dob, role, pswd, uname, gender);
             user.UpdateUser();
-            MessageBox.Show("User has been added successfully!");
+            MessageBox.Show("User has been updated successfully!");
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
 
         }
-
+        // onclik this searches for a user
         private void button1_Click(object sender, EventArgs e)
         {
             User userFound = User.Search(searchField.Text);
