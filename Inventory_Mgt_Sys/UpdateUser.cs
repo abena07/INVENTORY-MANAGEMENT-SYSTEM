@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BCr = BCrypt.Net;
 
 namespace Inventory_Mgt_Sys
 {
@@ -137,6 +138,7 @@ namespace Inventory_Mgt_Sys
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(180, 40);
             this.password.TabIndex = 24;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // userName
             // 
@@ -328,14 +330,19 @@ namespace Inventory_Mgt_Sys
         {
             string fname = this.firstName.Text;
             string lname = this.lastName.Text;
-            string pswd = this.password.Text;
+            string pswd_hash = Utils.hashPassword(this.password.Text);
             string role = this.role.Text;
             string uname = this.userName.Text;
             string gender = this.gender.Text;
             string dob = this.dob.Text;
-            User user = new User(fname, lname, dob, role, pswd, uname, gender);
+            User user = new User(fname, lname, dob, role, pswd_hash, uname, gender);
             user.DeleteUser(uname);
             MessageBox.Show("User has been deleted");
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -90,7 +90,7 @@ namespace Inventory_Mgt_Sys
 		{
 			_connection = new();
 			String insertQuery = $"INSERT INTO user(firstName, lastName, dob,role, password, userName, gender)" +
-				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dateOfBirth}', '%m/%d/%Y') ,'{role}','{password}', '{userName}','{gender}')";
+				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dateOfBirth}', '%m/%d/%Y') ,'{role}','u{password}', '{userName}','{gender}')";
 			try
 			{
 				MySqlCommand cmd = new(insertQuery, _connection.conn);
