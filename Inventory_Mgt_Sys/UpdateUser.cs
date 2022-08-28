@@ -281,12 +281,12 @@ namespace Inventory_Mgt_Sys
         {
             string fname = this.firstName.Text;
             string lname = this.lastName.Text;
-            string pswd = this.password.Text;
+            string pswd_hash = Utils.hashPassword(this.password.Text);
             string role = this.role.Text;
             string uname = this.userName.Text;
             string gender = this.gender.Text;
             string dob = this.dob.Text;
-            User user = new User(fname, lname, dob, role, pswd, uname, gender);
+            User user = new User(fname, lname, dob, role, pswd_hash, uname, gender);
             user.UpdateUser();
             MessageBox.Show("User has been updated successfully!");
         }
