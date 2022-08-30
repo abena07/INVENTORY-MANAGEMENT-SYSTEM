@@ -307,7 +307,7 @@ namespace Inventory_Mgt_Sys
                 role.Text = userFound.Role; 
                 gender.Text = userFound.Gender;
                 userName.Text = userFound.UserName;
-                dob.Text = userFound.DateOfBirth.ToString();
+                dob.Text = userFound.Dob.ToString();
             }
             else
                 MessageBox.Show(" oops,user does not exist.");

@@ -33,3 +33,39 @@ C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\BCrypt.Net.dll
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\BCrypt.Net-Next.dll
 C:\Users\abena\source\repos\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.Attendant.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Inventory_Mgt_Sys.exe
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Inventory_Mgt_Sys.deps.json
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Inventory_Mgt_Sys.runtimeconfig.json
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Inventory_Mgt_Sys.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Inventory_Mgt_Sys.pdb
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\BCrypt.Net.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\BCrypt.Net-Next.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.csproj.AssemblyReference.cache
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.AddProduct.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.Admin.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.Attendant.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.CreateUser.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.Form1.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.Properties.Resources.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.UpdateProduct.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.UpdateUser.resources
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.csproj.GenerateResource.cache
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.AssemblyInfoInputs.cache
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.AssemblyInfo.cs
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.csproj.CoreCompileInputs.cache
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.csproj.CopyComplete
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\refint\Inventory_Mgt_Sys.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.pdb
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.genruntimeconfig.cache
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\ref\Inventory_Mgt_Sys.dll
+C:\Users\Iam Odoefe\Desktop\Inventory_Mgt_Sys\Inventory_Mgt_Sys\obj\Debug\net6.0-windows\Inventory_Mgt_Sys.ViewUsers.resources

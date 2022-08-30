@@ -79,7 +79,7 @@ public string ProductCat
         {
             _connection = new();
             String insertQuery = $"INSERT INTO product(ProductName,Dop,ProductQty,ProductColor, ProductCat,ProductPrice)" +
-			$"VALUES('{productName}', STR_TO_DATE('{dop}', '%m/%d/%Y') ,'{productQty}','{productColor}', '{productCat}','{productPrice}')";
+			$"VALUES('{productName}', STR_TO_DATE('{dop}', '%Y/%m/%d') ,'{productQty}','{productColor}', '{productCat}','{productPrice}')";
 			try
 			{
                 MySqlCommand cmd = new(insertQuery, _connection.conn);
@@ -144,7 +144,7 @@ public string ProductCat
         public void UpdateProduct()
         {
             _connection = new();
-            string updateQuery = $"UPDATE product SET ProductName='{ProductName}', Dop=STR_TO_DATE({Dop},'%m/%d/%Y'), Dop='{Dop}'" +
+            string updateQuery = $"UPDATE product SET ProductName='{ProductName}', Dop=STR_TO_DATE({Dop},'%Y/%m/%d'), Dop='{Dop}'" +
                 $"ProductQty='{ProductQty}', ProductColor='{ProductColor}',ProductCat='{ProductCat}',ProductPrice='{ProductPrice}' WHERE ProductName='{ProductName}'";
             try
             {

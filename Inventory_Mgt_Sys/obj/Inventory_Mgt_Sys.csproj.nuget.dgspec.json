@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abena\\source\\repos\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj": {}
+    "C:\\Users\\Iam Odoefe\\Desktop\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abena\\source\\repos\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj": {
+    "C:\\Users\\Iam Odoefe\\Desktop\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abena\\source\\repos\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj",
+        "projectUniqueName": "C:\\Users\\Iam Odoefe\\Desktop\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj",
         "projectName": "Inventory_Mgt_Sys",
-        "projectPath": "C:\\Users\\abena\\source\\repos\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj",
-        "packagesPath": "C:\\Users\\abena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abena\\source\\repos\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\obj\\",
+        "projectPath": "C:\\Users\\Iam Odoefe\\Desktop\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys.csproj",
+        "packagesPath": "C:\\Users\\Iam Odoefe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iam Odoefe\\Desktop\\Inventory_Mgt_Sys\\Inventory_Mgt_Sys\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\abena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Iam Odoefe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

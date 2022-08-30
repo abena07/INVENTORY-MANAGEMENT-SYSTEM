@@ -30,12 +30,12 @@ namespace Inventory_Mgt_Sys
 			set { lastName = value; }
 		}
 
-		private DateOnly dateOfBirth;
+		private DateOnly dob;
 
-		public DateOnly DateOfBirth
+		public DateOnly Dob
 		{
-			get { return dateOfBirth; }
-			set { dateOfBirth = value; }
+			get { return dob; }
+			set { dob = value; }
 		}
 
 		private string userName;
@@ -71,7 +71,7 @@ namespace Inventory_Mgt_Sys
 		}
 
 
-		public User(string firstName, string lastName, string dateOfBirth, string role, string password, string userName, string gender)
+		public User(string firstName, string lastName, string dob, string role, string password, string userName, string gender)
 		{
 
 			this.userName = userName;
@@ -79,7 +79,7 @@ namespace Inventory_Mgt_Sys
 			this.lastName = lastName;
 			this.role = role;
 			this.password = password;
-			this.dateOfBirth = DateOnly.Parse(dateOfBirth, new CultureInfo("fr-FR"));
+			this.dob = DateOnly.Parse(dob, new CultureInfo("fr-FR"));
 			this.gender = gender;
 
 
@@ -89,8 +89,9 @@ namespace Inventory_Mgt_Sys
 		public void CreateUser()
 		{
 			_connection = new();
+			MessageBox.Show(dob+"");
 			String insertQuery = $"INSERT INTO user(firstName, lastName, dob,role, password, userName, gender)" +
-				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dateOfBirth}', '%m/%d/%Y') ,'{role}','u{password}', '{userName}','{gender}')";
+				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dob}', '%Y/%m/%d') ,'{role}','{password}', '{userName}','{gender}')";
 			try
 			{
 				MySqlCommand cmd = new(insertQuery, _connection.conn);
@@ -112,7 +113,7 @@ namespace Inventory_Mgt_Sys
 		public void UpdateUser()
 		{
 			_connection = new();
-			string updateQuery = $"UPDATE user SET firstName='{firstName}', lastName='{lastName}', dob=STR_TO_DATE({dateOfBirth},'%m/%d/%Y')," +
+			string updateQuery = $"UPDATE user SET firstName='{firstName}', lastName='{lastName}', dob=STR_TO_DATE({dob},'%m/%d/%Y')," +
 				$"role='{role}', password='{password}',userName='{userName}',gender='{gender}' WHERE userName='{userName}'";
 			try
 			{
@@ -165,17 +166,17 @@ namespace Inventory_Mgt_Sys
 					string firstName = reader["firstName"].ToString()!;
 					string lastName = reader["lastName"].ToString()!;
 					string userName = reader["userName"].ToString()!;
-					string dateOfBirth = DateTime.ParseExact(reader["dob"].ToString()!, "M/d/yyyy hh:mm:ss tt", 
-						CultureInfo.InvariantCulture).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-					string role = reader["role"].ToString()!;
+					string dob = DateTime.ParseExact(reader["dob"].ToString()!, "yyyy/M/d hh:mm:ss", 
+						CultureInfo.InvariantCulture).ToString("d/M/yyyy", CultureInfo.InvariantCulture);
+
+                    string role = reader["role"].ToString()!;
 					string password = reader["password"].ToString()!;
 					string gender = reader["gender"].ToString()!;
-                    Console.WriteLine("HFJHF"+dateOfBirth);
-                    userFound = new(firstName, lastName, dateOfBirth, role, password, userName, gender);
+                    Console.WriteLine("Here's the date"+dob);
+                    userFound = new(firstName, lastName, dob, role, password, userName, gender);
 				}
 
 				return userFound;
-                Console.WriteLine("fuss");
             }
 			catch (Exception e)
 			{
@@ -183,7 +184,6 @@ namespace Inventory_Mgt_Sys
 			}
 
 			return userFound;
-            Console.WriteLine("fuss");
 
         }
 	}

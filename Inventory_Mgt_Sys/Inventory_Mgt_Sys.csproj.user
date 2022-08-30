@@ -22,5 +22,8 @@
     <Compile Update="UpdateUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ViewUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

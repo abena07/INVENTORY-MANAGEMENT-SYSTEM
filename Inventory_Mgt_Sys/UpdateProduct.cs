@@ -70,7 +70,7 @@ namespace Inventory_Mgt_Sys
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(142, 35);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 25);
+            this.label8.Size = new System.Drawing.Size(42, 15);
             this.label8.TabIndex = 53;
             this.label8.Text = "Search";
             // 
@@ -90,7 +90,7 @@ namespace Inventory_Mgt_Sys
             // 
             this.searchField.Location = new System.Drawing.Point(142, 63);
             this.searchField.Name = "searchField";
-            this.searchField.Size = new System.Drawing.Size(150, 31);
+            this.searchField.Size = new System.Drawing.Size(150, 23);
             this.searchField.TabIndex = 51;
             this.searchField.TextChanged += new System.EventHandler(this.searchField_TextChanged);
             // 
@@ -120,7 +120,7 @@ namespace Inventory_Mgt_Sys
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(37, 344);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 25);
+            this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 64;
             this.label7.Text = "ProductCat";
             // 
@@ -129,7 +129,7 @@ namespace Inventory_Mgt_Sys
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(350, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 25);
+            this.label4.Size = new System.Drawing.Size(78, 15);
             this.label4.TabIndex = 62;
             this.label4.Text = "ProductColor";
             // 
@@ -152,13 +152,15 @@ namespace Inventory_Mgt_Sys
             this.Dop.Name = "Dop";
             this.Dop.Size = new System.Drawing.Size(180, 40);
             this.Dop.TabIndex = 60;
+            this.Dop.Value = new System.DateTime(2022, 8, 30, 0, 0, 0, 0);
+            this.Dop.ValueChanged += new System.EventHandler(this.Dop_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(39, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 25);
+            this.label3.Size = new System.Drawing.Size(98, 15);
             this.label3.TabIndex = 59;
             this.label3.Text = "Date Of Purchase";
             // 
@@ -167,7 +169,7 @@ namespace Inventory_Mgt_Sys
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(347, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
+            this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 58;
             this.label2.Text = "ProductQty";
             // 
@@ -176,7 +178,7 @@ namespace Inventory_Mgt_Sys
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 25);
+            this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 57;
             this.label1.Text = "ProductName";
             // 
@@ -213,7 +215,7 @@ namespace Inventory_Mgt_Sys
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(339, 344);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 25);
+            this.label5.Size = new System.Drawing.Size(75, 15);
             this.label5.TabIndex = 66;
             this.label5.Text = "ProductPrice";
             // 
@@ -238,7 +240,7 @@ namespace Inventory_Mgt_Sys
             this.Controls.Add(this.searchField);
             this.Controls.Add(this.Update);
             this.Name = "UpdateProduct";
-            this.Size = new System.Drawing.Size(599, 723);
+            this.Size = new System.Drawing.Size(617, 723);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,6 +302,11 @@ namespace Inventory_Mgt_Sys
             Product product = new Product(productname, dop, qty, color, cat, price);
             product.DeleteProduct(productname);
             MessageBox.Show("Product has been deleted!");
+        }
+
+        private void Dop_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
