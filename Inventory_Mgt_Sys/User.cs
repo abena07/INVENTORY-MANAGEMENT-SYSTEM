@@ -92,7 +92,7 @@ namespace Inventory_Mgt_Sys
 			_connection = new();
 			MessageBox.Show(dob+"");
 			String insertQuery = $"INSERT INTO user(firstName, lastName, dob,role, password, userName, gender)" +
-				$"VALUES('{firstName}','{lastName}', STR_TO_DATE('{dob}', '%Y/%m/%d') ,'{role}','{password}', '{userName}','{gender}')";
+				$"VALUES('{firstName}','{lastName}', '{dob}','{role}','{password}', '{userName}','{gender}')";
 			try
 			{
 				MySqlCommand cmd = new(insertQuery, _connection.conn);
@@ -106,7 +106,7 @@ namespace Inventory_Mgt_Sys
 			{
 				Console.WriteLine(e.Message);
 				Console.WriteLine("fuss");
-				MessageBox.Show("User already exists");
+				MessageBox.Show(e.Message);
 
 			}
 		}
@@ -170,10 +170,9 @@ namespace Inventory_Mgt_Sys
                 };
                 table.Controls.Add(label4, 3, row);
 
-                Label label5 = new Label()
-                {
-                    //Text = DateTime.ParseExact(reader["dob"].ToString(), "d/M/yyyy hh:mm:ss", CultureInfo.InvariantCulture).ToString(),
-					Text=""
+				Label label5 = new Label()
+				{
+					Text = reader["dob"].ToString(),
                 };
                 table.Controls.Add(label5, 4, row);
 
