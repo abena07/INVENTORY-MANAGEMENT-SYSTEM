@@ -7,6 +7,7 @@ using System.Configuration;
 using MySql.Data.MySqlClient;
 using System.Globalization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using MySqlX.XDevAPI.Relational;
 
 namespace Inventory_Mgt_Sys
 {
@@ -130,9 +131,63 @@ namespace Inventory_Mgt_Sys
 		}
 
 
-		//function to delete user
-		
-		public void DeleteUser(string username)
+        //function to view all users
+        public static void View(TableLayoutPanel table)
+        {
+            Db_Connection _connection = new();
+            String sql, Output = "";
+            string viewQuery = $"SELECT firstName,lastName, dob, role, userName, gender FROM user";
+            MySqlCommand cmd = new(viewQuery, _connection.conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+			
+			int row = 0;
+            while (reader.Read())
+				
+            {
+               // Output = Output + reader.GetValue(0) + " - " + reader.GetValue(1) + "/n";
+				Label label = new Label()
+				{
+					Text = reader["firstName"].ToString(),
+				};
+                table.Controls.Add(label, 1, row);
+
+                Label label2 = new Label()
+                {
+                    Text = reader["lastName"].ToString(),
+                };
+                table.Controls.Add(label2, 2, row);
+
+				Label label3 = new Label()
+				{
+					Text = DateTime.ParseExact(reader["dob"].ToString(), "d/M/yyyy hh:mm:ss", CultureInfo.InvariantCulture).ToString()
+                };
+                table.Controls.Add(label3, 3, row);
+
+                Label label4 = new Label()
+                {
+                    Text = reader["role"].ToString(),
+                };
+                table.Controls.Add(label4, 4, row);
+
+                Label label5 = new Label()
+                {
+                    Text = reader["userName"].ToString(),
+                };
+                table.Controls.Add(label5, 5, row);
+
+                Label label6 = new Label()
+                {
+                    Text = reader["gender"].ToString(),
+                };
+                table.Controls.Add(label6, 6, row);
+				 row++;
+            }
+
+        }
+
+        //function to delete user
+
+        public void DeleteUser(string username)
 		{
 			_connection = new();
             string deleteQuery = $"DELETE FROM user WHERE userName = '{username}'";
@@ -187,4 +242,6 @@ namespace Inventory_Mgt_Sys
 
         }
 	}
+
+	
 }
