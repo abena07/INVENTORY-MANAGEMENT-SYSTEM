@@ -140,7 +140,7 @@ namespace Inventory_Mgt_Sys
             MySqlCommand cmd = new(viewQuery, _connection.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
 			
-			int row = 0;
+			int row = 1;
             while (reader.Read())
 				
             {
@@ -149,37 +149,39 @@ namespace Inventory_Mgt_Sys
 				{
 					Text = reader["firstName"].ToString(),
 				};
-                table.Controls.Add(label, 1, row);
+                table.Controls.Add(label, 0, row);
 
                 Label label2 = new Label()
                 {
                     Text = reader["lastName"].ToString(),
                 };
-                table.Controls.Add(label2, 2, row);
+                table.Controls.Add(label2, 1, row);
 
 				Label label3 = new Label()
 				{
-					Text = DateTime.ParseExact(reader["dob"].ToString(), "d/M/yyyy hh:mm:ss", CultureInfo.InvariantCulture).ToString()
+                    //
+                    Text = reader["userName"].ToString(),
                 };
-                table.Controls.Add(label3, 3, row);
+                table.Controls.Add(label3, 2, row);
 
                 Label label4 = new Label()
                 {
                     Text = reader["role"].ToString(),
                 };
-                table.Controls.Add(label4, 4, row);
+                table.Controls.Add(label4, 3, row);
 
                 Label label5 = new Label()
                 {
-                    Text = reader["userName"].ToString(),
+                    //Text = DateTime.ParseExact(reader["dob"].ToString(), "d/M/yyyy hh:mm:ss", CultureInfo.InvariantCulture).ToString(),
+					Text=""
                 };
-                table.Controls.Add(label5, 5, row);
+                table.Controls.Add(label5, 4, row);
 
                 Label label6 = new Label()
                 {
                     Text = reader["gender"].ToString(),
                 };
-                table.Controls.Add(label6, 6, row);
+                table.Controls.Add(label6, 5, row);
 				 row++;
             }
 

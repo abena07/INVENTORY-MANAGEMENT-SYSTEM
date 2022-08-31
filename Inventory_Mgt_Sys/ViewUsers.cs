@@ -38,6 +38,7 @@ namespace Inventory_Mgt_Sys
             // 
             // table
             // 
+            this.table.AutoSize = true;
             this.table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.table.ColumnCount = 6;
             this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -151,6 +152,7 @@ namespace Inventory_Mgt_Sys
             this.table.ResumeLayout(false);
             this.table.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
