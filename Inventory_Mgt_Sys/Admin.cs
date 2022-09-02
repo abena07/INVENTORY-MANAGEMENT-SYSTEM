@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using System;
 
 namespace Inventory_Mgt_Sys
 {
@@ -19,10 +20,13 @@ namespace Inventory_Mgt_Sys
         private AddProduct addProduct;
         private UpdateProduct updateProduct;
         private ViewUsers viewUsers;
+        private TableLayoutPanel table;
+        
 
         public Admin()
         {
             InitializeComponent();
+           
 
         }
 
@@ -277,6 +281,8 @@ namespace Inventory_Mgt_Sys
         private void label4_Click(object sender, EventArgs e)
         {
             viewUsers.BringToFront();
-        }
+            User.View(viewUsers.GetTable());
+            
+    }
     }
 }

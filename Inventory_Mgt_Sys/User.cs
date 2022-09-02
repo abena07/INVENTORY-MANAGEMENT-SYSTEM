@@ -140,48 +140,64 @@ namespace Inventory_Mgt_Sys
             MySqlCommand cmd = new(viewQuery, _connection.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
 			
+			
 			int row = 1;
             while (reader.Read())
 				
             {
-               // Output = Output + reader.GetValue(0) + " - " + reader.GetValue(1) + "/n";
-				Label label = new Label()
+             
+                Label label = new Label()
 				{
 					Text = reader["firstName"].ToString(),
 				};
                 table.Controls.Add(label, 0, row);
+              
 
                 Label label2 = new Label()
                 {
                     Text = reader["lastName"].ToString(),
                 };
                 table.Controls.Add(label2, 1, row);
+             
 
-				Label label3 = new Label()
+
+                Label label3 = new Label()
 				{
                     //
                     Text = reader["userName"].ToString(),
                 };
+
                 table.Controls.Add(label3, 2, row);
+              
+
 
                 Label label4 = new Label()
                 {
                     Text = reader["role"].ToString(),
                 };
-                table.Controls.Add(label4, 3, row);
 
-				Label label5 = new Label()
+                table.Controls.Add(label4, 3, row);
+           
+
+
+                Label label5 = new Label()
 				{
 					Text = reader["dob"].ToString(),
                 };
                 table.Controls.Add(label5, 4, row);
+               
+
 
                 Label label6 = new Label()
                 {
                     Text = reader["gender"].ToString(),
                 };
+
                 table.Controls.Add(label6, 5, row);
-				 row++;
+
+                row++;
+
+				
             }
 
         }

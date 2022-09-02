@@ -19,10 +19,14 @@ namespace Inventory_Mgt_Sys
         public ViewUsers()
         {
             InitializeComponent();
-           User.View(table);
+           //User.View(table);
 
         }
 
+        public TableLayoutPanel GetTable() 
+        { return table; 
+
+        }
 
         private void InitializeComponent()
         {
